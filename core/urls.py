@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from accounts.views import home
 from accounts.views import success_page
+from recipe.views import recipe
 
 urlpatterns = [
   
+    path('recipe', recipe, name='recipe'),
     path('', home, name='home'),
     path("success", success_page),
     path('admin/', admin.site.urls),
